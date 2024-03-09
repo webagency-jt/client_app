@@ -1,12 +1,15 @@
+import swagger from "#config/swagger";
 import router from '@adonisjs/core/services/router';
 import AutoSwagger from "adonis-autoswagger";
-import swagger from "#config/swagger";
 
 router.get('/', async () => {
   return {
     hello: 'world',
   };
 });
+
+const UsersController = () => import('#controllers/users_controller');
+router.resource('users', UsersController).apiOnly();
 
 // returns swagger in YAML
 router.get("/swagger", async () => {
