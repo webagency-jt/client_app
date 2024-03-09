@@ -5,16 +5,17 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ace": "npm run ace --workspace=api"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "eslint-config": "*",
+    "typescript-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.11.1"
   },
   "packageManager": "npm@10.0.0",
   "workspaces": [
